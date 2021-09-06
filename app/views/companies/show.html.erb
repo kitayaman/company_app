@@ -1,28 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @company.name %>
-</p>
-
-<p>
-  <%= @company.content %>
-</p>
-
-<p>
-  <strong>Current status:</strong>
-  <%= @company.current_status %>
-</p>
-
-<p>
-  <strong>Interview:</strong>
-  <%= @company.interview %>
-</p>
-
-<p>
-  <strong>Other info:</strong>
-  <%= @company.other_info %>
-</p>
-
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+<div class="main-body py-2 p-md-5 max-w-800">
+  <div class="container">
+    <div class="company-header">
+      <p>企業名：<%= @company.name %><span class="ms-2">現在の状況：<%= @company.current_status%></span></p>
+      <p>面接日：<%= @company.interview %></p>
+    </div>
+    <div class="company-body mt-5">
+      <h5 class="text-secondary">企業情報</h5>
+      <p><%= @company.content %></p>
+      <h5 class="text-secondary">その他</h5>
+      <p><%= @company.other_info%></p>
+    </div>
+    <div class="text-end">
+      <%= link_to '編集する', edit_company_path(@company), class: "text-decoration-none" %>
+      <%= link_to '削除する', company_path(@company), method: :delete, data: { confirm: '企業を削除しますか?' }, class: "text-decoration-none" %>
+    </div>
+  </div>
+  <h5><%= link_to '企業一覧へ', companies_path, class: "text-secondary text-decoration-none" %></h5>
+</div>

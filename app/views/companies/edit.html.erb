@@ -1,6 +1,10 @@
-<h1>Editing Company</h1>
+<div class="main-body py-5">
+  <div class="container">
+    <div class="max-w-800">
+      <h1 class="text-secondary mt-3">企業を追加</h1>
+      <%= render 'form', company: @company %>
+      <h5 class="mt-5"><%= link_to '企業一覧へ', companies_path, class: "text-secondary text-decoration-none" %></h5>
+    </div>
+  </div>
+</div>
 
-<%= render 'form', company: @company %>
-
-<%= link_to 'Show', @company %> |
-<%= link_to 'Back', companies_path %>

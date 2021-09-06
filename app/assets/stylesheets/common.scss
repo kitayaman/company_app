@@ -1,0 +1,161 @@
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #333333;
+}
+
+ul li {
+  list-style: none;
+}
+
+li {
+  text-decoration: none;
+}
+
+div {
+  display: block;
+}
+
+.notice {
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  background-color: rgba(62, 107, 231, 0.945);
+  color: #fff;
+  margin: 0;
+}
+
+.alert {
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  background-color: rgb(236, 86, 41);
+  color: #fff
+}
+
+//header
+.header {
+  width: 100%;
+  height : 70px;
+  color: #fff;
+  padding: 4px 30px;
+  position: relative;
+}
+
+.header-left-nav h3 {
+  padding: 15px;
+}
+
+.header-left-nav {
+  float: left;
+  border-radius: 2px;
+  padding-left: 30px;
+}
+
+.header-right-nav {
+  float: right;
+}
+
+.nav-item {
+  color: #fff;
+  font-size: 14px;
+  display: inline-block;
+  margin: 20px;
+}
+
+.header-nav-menu li {
+  line-height: 30px;
+  font-size: 16px;
+  padding: 3px 5px;
+}
+
+.header-nav-menu li:hover {
+  opacity: 0.8;
+}
+
+.nav-sidebar {
+  position: absolute;
+  top: 70px;
+  right: -250px;
+  height: auto;
+  padding-bottom: 30px;
+  transition: all 0.2s;
+  background: #f8f9fa;
+}
+
+.nav-sidebar nav {
+  width: 200px;
+}
+
+//footer
+.footer {
+  margin-top: 100px;
+}
+
+// top-page
+
+.top-field {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 550px;
+  padding: 20px;
+}
+
+.info-area {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+// 検索フォーム
+
+.search-field {
+  top: 20px;
+  left: 30%;
+  position: absolute;
+  width: 50%;
+}
+
+.search-text {
+  width: 80%;
+}
+
+.event-search {
+  width: 40%;
+}
+
+.address-search {
+  width: 40%;
+}
+
+//フォーム
+input#company_name {
+  border: none;
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  height: 40px;
+}
+
+trix-editor#company_content {
+  min-height: 200px;
+}
+
+textarea#company_other_info {
+  width: 100%;
+}
+
+select#company_current_status {
+  padding: 10px;
+}
+
+// 画面幅固定
+
+.max-w-800 {
+  max-width: 1000px;
+  margin: 0 auto;
+}
