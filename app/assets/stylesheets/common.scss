@@ -153,6 +153,14 @@ select#company_current_status {
   padding: 10px;
 }
 
+select#q_current_status_eq {
+  padding: 5px;
+}
+
+input#q_name_cont {
+  min-width: 300px;
+}
+
 // 画面幅固定
 
 .max-w-800 {

@@ -3,9 +3,9 @@
   <table class="table table-hover mt-3">
     <thead>
       <tr>
-        <th scope="col">企業名</th>
+        <th scope="col"><%= sort_link(@q, :name, "企業名") %></th>
         <th scope="col">現在の状況</th>
-        <th scope="col">面接日</th>
+        <th scope="col"><%= sort_link(@q, :interview, "面接日") %></th>
         <th scope="col">その他</th>
       </tr>
     </thead>
@@ -14,7 +14,7 @@
           <tr>
             <td class="py-3"><%= link_to company.name, company_path(company), class: 'text-decoration-none'%></td>
             <td class="py-3"><%= company.current_status %></td>
-            <td class="py-3"><%= company.interview %></td>
+            <td class="py-3"><%= l company.interview %></td>
             <td class="py-3"><%= company.other_info %></td>
           </tr>
         <% end %>

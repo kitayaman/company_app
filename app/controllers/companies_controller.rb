@@ -1,9 +1,11 @@
 class CompaniesController < ApplicationController
   before_action :set_company, only: %i[ show edit update destroy ]
+  before_action :set_ransack, only: %i[ index new show edit ]
 
   # GET /companies or /companies.json
   def index
-    @companies = Company.all
+    @q = Company.ransack(params[:q])
+    @companies = @q.result(distinct: true)
   end
 
   # GET /companies/1 or /companies/1.json
@@ -60,6 +62,10 @@ class CompaniesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_company
       @company = Company.find(params[:id])
+    end
+
+    def set_ransack
+      @q = Company.ransack(params[:q])
     end
 
     # Only allow a list of trusted parameters through.

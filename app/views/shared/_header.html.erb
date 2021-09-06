@@ -13,10 +13,13 @@
           <a class="nav-link" href="/companies/new">企業登録</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-5" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      <div class="d-flex me-5">
+        <%= search_form_for @q do |f| %>
+          <%= f.search_field :name_cont, placeholder: "企業名" %>
+          <%= f.select :current_status_eq, [["未選択", "未選択"], ["書類審査待ち", "書類審査待ち"], ["一次面接待ち", "一次面接待ち"], ["二次面接待ち", "二次面接待ち"], ["最終面接待ち", "最終面接待ち"], ["合格", "合格"], ["不合格", "不合格"], ["その他", "その他"]], include_blank: "ステータス" %>
+          <%= f.submit '検索' %>
+        <% end %>
+      </div>
     </div>
   </div>
 </nav>
