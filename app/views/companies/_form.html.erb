@@ -17,13 +17,18 @@
   </div>
 
   <div class="field">
+    <%= form.label :content %>
+    <%= form.rich_text_area :content %>
+  </div>
+
+  <div class="field">
     <%= form.label :current_status %>
     <%= form.text_field :current_status %>
   </div>
 
   <div class="field">
     <%= form.label :interview %>
-    <%= form.datetime_select :interview %>
+    <%= form.datetime_field :interview %>
   </div>
 
   <div class="field">
